@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="/admin/admin-layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dashboard</title>
+<style>
+	h1,h3{
+		font-weight:bold;
+		font-size:60px;
+		animation: random-color 4s linear infinite;
+	}
+	
+	h2,h4{
+		font-weight:bold;
+		font-size:60px;
+		animation: random-color-1 4s ease-in infinite;
+	}
+	
+	@keyframes random-color{
+		0%{
+			color:black;
+			transform:rotateY(0deg);
+		}
+		100%{
+			color:green;
+			transform:rotateY(-360deg);
+		}
+	}
+	@keyframes random-color-1{
+		0%{
+			color:red;
+			transform:rotateY(0deg);
+		}
+		100%{
+			color:blue;
+			transform:rotateY(360deg);
+		}
+	}
+</style>
+</head>
+<body>
+	<div layout:fragment="content" style="text-align:center;">
+		<h1​ th:text="#{welcome.wel}" style="font-family:'Khmer OS Muol';">WELCOME</h1><br>
+		<h2 th:text="#{welcome.to}" style="font-family:'Khmer OS Muol';">TO</h2><br>
+		<h3 th:text="#{welcome.coco}" style="font-family:'Khmer OS Muol';">COCO</h3><br>
+		<h4 th:text="#{welcome.comp}" style="font-family:'Khmer OS Muol';">COMPANY</h4>
+	</div>
+</body>
+</html>
